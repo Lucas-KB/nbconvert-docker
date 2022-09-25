@@ -22,9 +22,6 @@ RUN echo "Installing Chrome..." && \
     apt install -y google-chrome-stable && \
     rm -rf /var/lib/apt/lists/*
 
-# Update this to pick the correct year
-ENV PATH="/usr/local/texlive/2022/bin/x86_64-linux:${PATH}"
-
 RUN useradd -ms /bin/bash -G sudo developer && \
     echo "developer:developer" | chpasswd
 
